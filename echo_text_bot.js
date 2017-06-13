@@ -19,15 +19,15 @@
 
 const path = require('path');
 
-const service = require('../lib/service');
+const service = require('./lib/service');
 
 // a simple echo bot which sends back text messages it receives
 console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
 
 service.createService({
-  port: 443,
-  key: '../cert/server.key',
-  cert: '../cert/server.crt',
+  port: 3000,
+  key: 'cert/server.key',
+  cert: 'cert/server.crt',
   storePath: path.join(__dirname, 'store'),
   auth: process.env.WIRE_BOT_AUTHTOKEN,
 }, (bot) => {
