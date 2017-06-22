@@ -31,9 +31,9 @@ var chain = fs.readFileSync(DIR_CERT+"fullchain.pem", 'utf8');
 chain = chain.split("\n");
 var cert = [];
 for (var line in chain){
-  console.log('line');
+  console.log(line);
   if(line.length !== 0 && line.match(/-END CERTIFICATE-/)){
-    console.log('match')
+    console.log('match');
     cert.push(line);
     ca.push(cert.join("\n"));
     cert = [];
