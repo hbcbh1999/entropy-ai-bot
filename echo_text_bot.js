@@ -21,30 +21,30 @@
 const path = require('path');
 const fs = require('fs');
 const service = require('./lib/service');
-var _ = require('underscore');
-const DIR_CERT = 'cert/'
+// var _ = require('underscore');
+// const DIR_CERT = 'cert/'
 
-// a simple echo bot which sends back text messages it receives
+// // a simple echo bot which sends back text messages it receives
 console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
 
-var ca = [];
-var chain = fs.readFileSync(DIR_CERT+"fullchain.pem", 'utf8');
-chain = chain.split('\n');
-var cert = [];
-var key, line;
-_.forEach(chain,function(line){
-  cert.push(line);
-  if(line.length !== 0 && line.match(/-END CERTIFICATE-/)){
-    ca.push(cert.join("\n"));
-    cert = [];
-  }
-});
+// var ca = [];
+// var chain = fs.readFileSync(DIR_CERT+"fullchain.pem", 'utf8');
+// chain = chain.split('\n');
+// var cert = [];
+// var key, line;
+// _.forEach(chain,function(line){
+//   cert.push(line);
+//   if(line.length !== 0 && line.match(/-END CERTIFICATE-/)){
+//     ca.push(cert.join("\n"));
+//     cert = [];
+//   }
+// });
 
 service.createService({
   port: 3000,
-  ca: ca,
-  key: DIR_CERT+'privkey.pem',
-  cert: DIR_CERT+'cert.pem',
+  // ca: ca,
+  // key: DIR_CERT+'privkey.pem',
+  // cert: DIR_CERT+'cert.pem',
   storePath: path.join(__dirname, 'store'),
   auth: process.env.WIRE_BOT_AUTHTOKEN,
 }, (bot) => {
