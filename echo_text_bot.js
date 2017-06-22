@@ -21,6 +21,7 @@
 const path = require('path');
 const fs = require('fs');
 const service = require('./lib/service');
+var _ = require('underscore');
 const DIR_CERT = 'cert/'
 
 // a simple echo bot which sends back text messages it receives
@@ -28,19 +29,16 @@ console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
 
 var ca = [];
 var chain = fs.readFileSync(DIR_CERT+"fullchain.pem", 'utf8');
-chain = chain.split("\n");
+chain = chain.split('\n');
 var cert = [];
-for (var line in chain){
-  console.log(line);
+var key, line;
+_.forEach(chain,function(line){
+  cert.push(line);
   if(line.length !== 0 && line.match(/-END CERTIFICATE-/)){
-    console.log('match');
-    cert.push(line);
     ca.push(cert.join("\n"));
     cert = [];
   }
-}
-console.log('ca length:'+ca.length);
-
+});
 
 service.createService({
   port: 3000,
