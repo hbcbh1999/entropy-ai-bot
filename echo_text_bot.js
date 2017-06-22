@@ -26,8 +26,8 @@ console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
 
 service.createService({
   port: 3000,
-  key: 'cert/server.key',
-  cert: 'cert/server.crt',
+  key: 'cert/privkey.pem',
+  cert: 'cert/cert.pem',
   storePath: path.join(__dirname, 'store'),
   auth: process.env.WIRE_BOT_AUTHTOKEN,
 }, (bot) => {
