@@ -27,11 +27,14 @@
   "dependencies": {
     "base64-arraybuffer": "^0.1.5",
     "cryptobox": "git+https://github.com/damirn/cryptobox.js.git",
+    "dotenv": "^4.0.0",
     "follow-redirects": "^1.2.1",
+    "lodash": "^4.17.4",
     "protocol-buffers": "^3.2.1",
+    "underscore": "^1.8.3",
+    "util": "^0.10.3",
     "uuid": "^3.0.1",
-    "wire-webapp-proteus": "~3.0.3",
-    "underscore": "^1.8.3"
+    "wire-webapp-proteus": "~3.0.3"
   },
   "devDependencies": {
     "eslint": "^3.13.1",

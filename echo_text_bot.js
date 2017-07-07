@@ -20,25 +20,12 @@
 
 const path = require('path');
 const fs = require('fs');
+require('dotenv').config();
 const service = require('./lib/service');
 // var _ = require('underscore');
 // const DIR_CERT = 'cert/'
 
-// // a simple echo bot which sends back text messages it receives
 console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
-
-// var ca = [];
-// var chain = fs.readFileSync(DIR_CERT+"fullchain.pem", 'utf8');
-// chain = chain.split('\n');
-// var cert = [];
-// var key, line;
-// _.forEach(chain,function(line){
-//   cert.push(line);
-//   if(line.length !== 0 && line.match(/-END CERTIFICATE-/)){
-//     ca.push(cert.join("\n"));
-//     cert = [];
-//   }
-// });
 
 service.createService({
   port: 3000,
@@ -49,8 +36,14 @@ service.createService({
   auth: process.env.WIRE_BOT_AUTHTOKEN,
 }, (bot) => {
   console.log(`Bot instance created ${bot.botID}`);
+  // this sends the message (to Entropy)
   bot.on('message', (from, message) => {
-    console.log(`Got message from ${from} text: ${message.text}`);
+    console.log(`Got message from ${from} text: ${JSON.stringify(message.text)}`);
+    bot.onWireMessage(message.text.content, (sendStatus) => {
+      console.log(`message successfully sent with status ${sendStatus}`);
+    });
+    // TODO: need to remove below echo
+    console.log('WARNING: NEED TO REMOVE DEFAULT ECHO!!!!')
     bot.sendMessage(message.text.content, (sendStatus) => {
       console.log(`message successfully sent with status ${sendStatus}`);
     });
@@ -63,5 +56,12 @@ service.createService({
   });
   bot.on('rename', (name, conversation) => {
     console.log(`Conversation ${conversation.id} renamed to ${name}`);
+  });
+  //this forward's entropy's response/message to App client (from Entropy)
+  bot.on('entropy-message', (from,message) => {
+    console.log(`ready to send entropy.ai bot message`);
+    bot.sendMessage(message, (sendStatus) => {
+      console.log(`Entropy message successfully forwarded with status ${sendStatus}`);
+    });
   });
 });
