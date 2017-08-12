@@ -1,26 +1,31 @@
 {
-  "name": "wire-bot-sdk-node",
-  "version": "0.0.1",
-  "description": "Node.js module for creating Wire bots",
-  "main": "lib/service.js",
-  "private": true,
+  "name": "caura-chatbot",
+  "version": "0.1.0",
+  "description": "Caura's Implementation of Wire Bot",
+  "main": "concierge.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wireapp/bot-sdk-node.git"
+    "url": "git+https://github.com/segahm/caura-chatbot.git"
   },
   "keywords": [
     "Wire",
-    "bot"
+    "bot",
+    "chatbot"
   ],
-  "author": "Damir Nedžibović <damirn@gmail.com>",
+  "author": "Segah Meer",
+  "contributors": [
+    "Damir Nedžibović <damirn@gmail.com>",
+    "Dejan Kovacevic <dejankov@gmail.com>"
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/wireapp/bot-sdk-node/issues"
   },
-  "homepage": "https://github.com/wireapp/bot-sdk-node#readme",
+  "homepage": "https://github.com/segahm/caura-chatbot",
   "engines": {
     "node": "6.9.0"
   },

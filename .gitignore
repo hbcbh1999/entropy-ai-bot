@@ -6,3 +6,4 @@ example
 example/echo_text_bot.js
 cert/*
 .env
+store/
