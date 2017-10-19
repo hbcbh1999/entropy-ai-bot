@@ -5,3 +5,4 @@ test
 example
 example/echo_text_bot.js
 cert/*
+store/
