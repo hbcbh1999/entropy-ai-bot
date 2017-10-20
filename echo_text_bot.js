@@ -39,13 +39,15 @@ console.log('auth token:'+process.env.WIRE_BOT_AUTHTOKEN);
 //     cert = [];
 //   }
 // });
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 service.createService({
   port: 3000,
   // ca: ca,
   // key: DIR_CERT+'privkey.pem',
   // cert: DIR_CERT+'cert.pem',
-  storePath: path.join(__dirname, 'store'),
+  storePath: path.join(((process.env.NODE_ENV == 'production') ? '/tmp' : process.env.HOME),'wire-store'),
+  // path.join(__dirname, 'store')
   auth: process.env.WIRE_BOT_AUTHTOKEN,
 }, (bot) => {
   console.log(`Bot instance created ${bot.botID}`);
