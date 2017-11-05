@@ -9,7 +9,13 @@ This operator answers new client requests about our Data Consulting services.
 
 ## Try It
 
-[app.wire.com/?bot=s2bot](https://app.wire.com/?bot=s2bot)
+**Steps:**
+1. Register a new temporary user on [app.wire.com](https://app.wire.com/auth/#register)
+2. Follow all the usual wire's activation procedures *(i.e. email confirmation - Sorry!)*
+3. Login with the same credentials to [w.caura.co/s2bot](https://w.caura.co/s2bot)
+4. Continue using the bot on official app.wire.com or w.caura.co as you like
+
+*(Non-IE/Chrome users: please allow 3rd party cookies under Cookie Control)*
 
 ## Updates
 Handled by Caura & Co. See Wire link below for updates to their SDK.
@@ -23,7 +29,7 @@ Handled by Caura & Co. See Wire link below for updates to their SDK.
 
 ## About / Contributions
 
-[@segahm](https://github.com/segahm)<br/>
+[@segahm](https://github.com/segahm) - Caura & Co.<br/>
 [@emirkin](https://github.com/emirkin) - entropy.ai<br/>
 [@dkovacevic](https://github.com/dkovacevic) - Wire dev. support and troubleshooting<br/>
 
