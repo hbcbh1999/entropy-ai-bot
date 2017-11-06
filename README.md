@@ -1,9 +1,7 @@
-# Engagement Operator (S2Bot)
+# S2Bot (Data Consultant)
 <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"/></a>
 
-Implementation of Wire Chatbot using entropy.ai for natural language processing.
-
-This operator answers new client requests about our Data Consulting services.
+Implementation of Wire Chatbot using Entropy.AI for natural language processing. It answers new client requests about our Data Consulting services.
 
 ![chat examples](https://user-images.githubusercontent.com/1756903/32033531-d2a5b1da-b9c1-11e7-85d0-d754e94e9dfb.gif)
 
