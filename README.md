@@ -13,12 +13,6 @@ Language capacity is limited, so default replies are preconfigured when bot does
 
 <img width="700" src="https://user-images.githubusercontent.com/1756903/33036933-d9a46b52-cde4-11e7-84f6-36c09c1be10b.png">
 
-## Updates
-Handled by Caura & Co. See Wire link below for updates to their SDK.
-
-[caura.co](https://www.caura.co) - will be launched publicly here once we feel ready.
-
-
 ## Try It
 
 **Steps:**
@@ -36,3 +30,11 @@ Handled by Caura & Co. See Wire link below for updates to their SDK.
 [@dkovacevic](https://github.com/dkovacevic) - Wire dev. support and troubleshooting<br/>
 
 [![Caura & Co.](https://media.giphy.com/media/3ov9jWL0UzwzwvsPTi/giphy.gif "telephone operators")](https://www.caura.co)
+
+## How To Stay Up To Date
+
+[caura.co](https://www.caura.co) - will be launched publicly here.
+
+EQ engine - updates are handled by Caura & Co.
+Wire SDK - see Wire link above for this git repo for updates to their SDK
+Sample use cases - we reserve the right to switch and disconnect these as we please
