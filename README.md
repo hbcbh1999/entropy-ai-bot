@@ -35,6 +35,6 @@ Language capacity is limited, so default replies are preconfigured when bot does
 
 [caura.co](https://www.caura.co) - will be launched publicly here.
 
-EQ engine - updates are handled by Caura & Co.
-Wire SDK - see Wire link above for this git repo for updates to their SDK
+EQ engine - updates are handled by Caura & Co.<br>
+Wire SDK - see Wire link above for this git repo for updates to their SDK<br>
 Sample use cases - we reserve the right to switch and disconnect these as we please
