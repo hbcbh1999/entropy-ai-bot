@@ -19,10 +19,10 @@ Language capacity is limited, so default replies are preconfigured when bot does
 
 1. Register a new temporary user on [app.wire.com](https://app.wire.com/auth/#register)
 2. Follow all the usual wire's activation procedures *(i.e. email confirmation - Sorry!)*
-3. Login with the same credentials to [w.caura.co/entropybot](https://w.caura.co/entropybot)
-4. Continue using the bot on official app.wire.com or w.caura.co as you like
+3. Enable the bot by clicking here: [caura.co/entropy-ai](https://www.caura.co/entropy-ai)
 
 *(Non-IE/Chrome users: please allow 3rd party cookies under Cookie Control)*
+*if step (3) fails , alternatively sign-in with the same credentials to [w.caura.co/entropybot](https://w.caura.co/entropybot)*
 
 ## About / Contributions
 
